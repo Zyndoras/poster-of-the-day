@@ -1,0 +1,16 @@
+default: &default
+  adapter:  postgresql
+  encoding: unicode
+  pool:     5
+
+development:
+  <<: *default
+  database: poster_development
+  username: postgres
+  password: postgres
+
+production:
+  <<: *default
+  database: poster_production
+  username: username
+  password: secret
